@@ -30,9 +30,9 @@
 \LoadClassWithOptions{scrartcl}
 
 \setcounter{secnumdepth}{-1}
-\RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
-\RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor}
-\RequirePackage{hyperref}
+\RequirePackage[hmargin=1.25cm,vmargin=1.25cm]{geometry} %,twocolumn,columnsep=.5cm]{geometry}
+\RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor,booktabs}
+\RequirePackage{hyperref,fontawesome,setspace}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
 % The text is capitalized before being expanded.
@@ -68,6 +68,24 @@
 \setkomafont{disposition}{\color[HTML]{801010}}
 \setkomafont{section}{\scshape\Large\mdseries}
 
+% Addition to this class by Sam Delmerico.
+\newcommand{\Header}[7]{
+    \begin{minipage}[c]{0.2\textwidth}
+        {\usekomafont{part}\selectfont\huge #1}
+    \end{minipage}
+    \begin{minipage}[r]{0.8\textwidth}
+        \begin{flushright}
+        \colorbox[HTML]{F5DD9D}{
+            \begin{tabular}{llrr}
+                \faPhone & #2 & \href{mailto:#5}{#5} & \faEnvelopeO \\
+                \faHome & #3 & \href{http://#6}{#6} & \faGithub \\
+                & #4 & \href{http://#7}{#7} & \faLinkedin \\
+            \end{tabular}
+        }
+        \end{flushright}
+    \end{minipage}
+}
+
 % In tccv \part must contain the subject of the curriculum vitae.
 % The command will start a new page and output in onecolumn the
 % subject (first and last name) with the text from the optional
@@ -77,7 +95,7 @@
     \begin{center}
 	\vskip-\lastskip%
 	{\usekomafont{part} #2} \medskip\\
-	{\fontfamily{pzc}\selectfont\Huge {#1}}
+	{\selectfont\Large {#1}}
 	\bigskip
     \end{center}]}
 
@@ -110,17 +128,17 @@
 %         {address}
 %         {phone number}
 %         {email}
-\newcommand\personal[4][]{%
+\newcommand\personal[5][]{%
     \newcommand\SYMBOL[1]{\raisebox{-2pt}{\Large\ding{##1}}}%
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
     \colorbox[HTML]{F5DD9D}{%
     \begin{tabularx}{\boxwidth}{c|X}
-    \SYMBOL{45} & {#2}\smallskip\\
-    \SYMBOL{37} & {#3}\smallskip\\
-    \SYMBOL{41} & \href{mailto:#4}{#4}
+    \SYMBOL{37} & {#2}\smallskip\\
+    \SYMBOL{41} & \href{mailto:#3}{#3}
     \ifstrempty{#1}{}{\smallskip\\ \SYMBOL{218} & \href{http://#1}{#1}}
+    \ifstrempty{#5}{}{\smallskip\\ \SYMBOL{218} & \href{http://#4}{#4}}
     \end{tabularx}}}
 
 % Every \item can be followed by one or more paragraphs
@@ -133,14 +151,20 @@
 %     One or more paragraphs describing what achieved during this application.
 \newenvironment{eventlist}{%
     \newcommand*\inskip{}
-    \renewcommand\item[3]{%
-	\inskip%
-	{\raggedleft\textsc{##1}\\[1pt]}
-	\ifstrempty{##2}{}{##2\\[2pt]}
-	{\Large\textit{##3}}
-	\medskip
-	\renewcommand\inskip{\bigskip}}}
-    {\bigskip}
+    \renewcommand\item[3]{
+    	\inskip
+    	{\raggedleft\textsc{##1}\\[1pt]}
+    	{\large\textbf{\textit{##3}}\\[2pt]}
+    	\ifstrempty{##2}{}{\emph{##2}}
+    % 	\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+    % 	\begin{tabularx}{\textwidth}{lR}
+    %     	\ifstrempty{##2}{}{##2} &
+    %     	{\textsc{##1}\\[1pt]}
+    % 	\end{tabularx}
+    	
+    	\renewcommand\inskip{\smallskip}
+    }
+}
 
 % Use only \item inside this environment, no other macros
 % are allowed:

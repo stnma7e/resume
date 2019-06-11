@@ -1,27 +1,80 @@
-%\title{My two column CV}
-%
-% tccv (two columns curriculum vitae) is a LaTeX class inspired by
-% the template found at latextemplates.com by Alessandro Plasmati.
-%
-% Create by Nicola Fontana, the original files can be downloaded from:
-% http://dev.entidi.com/p/tccv/
-%
 \documentclass{tccv}
 \usepackage[english]{babel}
+\usepackage{hanging}
 
 \begin{document}
 
-\part[]{Sam Delmerico}
-
-\personal
-    [github.com/stnma7e]
-    {3332 Cameron Trl, Norcross, GA 30092}
+\Header{Sam Delmerico}
     {(404) 786-3104}
+    {3332 Cameron Trl}
+    {Peachtree Corners, GA 30092}
     {svdelmerico@gmail.com}
+    {github.com/stnma7e}
+    {linkedin.com/in/sam-delmerico}
 
+\begin{minipage}[t]{0.35\textwidth}
+    \section{Education}
+    \begin{tabular}{rl}
+        2019 & \textbf{Chemistry, B.S.} \\
+             & \emph{Georgia Tech} \\
+             & \emph{Highest Distinction} \\
+             & GPA: 3.71 \\
+             & Dean's List \\
+        
+        2017 & \textbf{Chemistry} \\
+        |    & \emph{Georgia State University} \\
+        2016 & GPA: 4.11 \\
+             & Honors College \\
+             & President's List
+    \end{tabular}
+    
+         
+    \section{Computer Skills}
+    \textbf{\textsc{Languages}}
+    
+    \textsc{Proficient:} Python - Rust - Java
+    
+    \textsc{Familiar:} 
+    {
+        C/C++ - Javascript - C\# - Haskell - Go
+    } \\
+    
+    \textbf{\textsc{OS}}:  \\
+        Linux, Windows \\
+    
+    \textbf{\textsc{Tools}}: \\
+        Git, Jupyter, \LaTeX{} \\
+    
+    \textbf{Courses} \\
+        Intro to CS \newline
+        Intro to OOP \newline
+        Intro to Data Structures and Algorithms \newline
+        Linear Algebra I \& II \newline
+        Quantum Computing and Information Theory
+        
+    \section{Awards and Presentations}
+    
+    \textbf{President's Undergraduate Research Award (PURA)} \\
+    \emph{Summer 2018}, Georgia Tech \\
+    
+    \textbf{Georgia Tech Energy Club} \\
+    \emph{Fall 2018}, Invited to talk about computational research in supercapacitor design \\
+    
+    \textbf{SERMACS 2018} \\
+    \emph{Fall 2018}, Poster presentation on computationally modelling supercapacitors
+\end{minipage}
+\begin{minipage}[t]{0.1\textwidth}
+\end{minipage}
+\begin{minipage}[t]{0.65\textwidth}
 \section{Work experience}
 
 \begin{eventlist}
+
+\item{Jun 2019 -- Present}
+     {Kabbage, Inc.}
+     {Software Engineering Intern}
+    
+Blah blah blah
 
 \item{Sept 2017 -- Present}
      {McDaniel Lab, Georgia Tech}
@@ -29,23 +82,23 @@
 
 I develop computational simulations of chemical systems. The simulations are written using a Python library and run on local Linux machines and on a computing cluster hosted by the school. Algorithms and mathematical analyses of the collected data are scripted in Python (often via Jupyter notebooks) making use of parsing libraries for extraction of relevant data.
 
-\item{May 2018 -- Present}
-     {Georgia Tech Rugby Club}
+\item{May 2018 -- May 2019}
+     {Georgia Tech Men's Rugby Club}
      {Treasurer}
 
-I'm the treasurer for the Men's Rugby Club at Georgia Tech, and I manage the \$10,000 semesterly budget for the team.
+In this volunteer position, I managed the team's \$20,000 yearly budget.
 
 \item{Jan 2017 -- Aug 2017}
      {Ivanov Lab, Georgia State University}
      {Undergraduate Research Assistant}
 
-I helped script data analysis programs for the Ivanov group, a computational biophysical chemistry lab that performs simulations of biological molecules.
+I helped script data analysis programs for the Ivanov group, a computational biophysical chemistry lab.
 
 \item{May 2017}
      {OnSolve, Vietnam}
-     {Intern}
+     {Software Engineering Intern}
 
-In charge of product Docker container pipeline using Jenkins for product compilation and automated deployment to Amazon AWS.
+I set up an automatic product deployment pipeline by installing source control hooks to build the product with a cloud Jenkins instance and deploy production Docker containers to Amazon AWS.
 
 \item{Aug 2016 -- Apr 2017}
      {Georgia State University}
@@ -53,81 +106,12 @@ In charge of product Docker container pipeline using Jenkins for product compila
 
 Assisted in general chemistry labs during my first two semesters of college.
 
-\end{eventlist}
-
-\vspace{150pt}
-
-\section{Education}
-
-\begin{yearlist}
-
-% \item[Bachelor of Science]{2017 -- Present}
-\item{2017 -- 2019}
-     {Chemistry}
-     {Georgia Tech \newline
-     GPA: 3.71 \newline
-     Dean's List}
-
-\item{2016 -- 2017}
-     {Chemistry}
-     {Georgia State University \newline
-     GPA: 4.11 \newline
-     Honors College \newline
-     President's List}
-     
-\end{yearlist}
-
-\vspace{-12pt}
-
-\section{Awards and Presentations}
-
-\begin{yearlist}
-
-\item{Nov 2018}
-     {Georgia Tech Energy Club}
-     {Invited to talk about computational research in supercapacitor design}
-
-\item{Nov 2018}
-     {SERMACS 2018}
-     {Poster presentation on computational supercapacitor modelling}
-
-\item{May 2018}
-     {President's Undergraduate Research Award (PURA)}
-     {Georgia Tech}
-
-\end{yearlist}
-
-\vspace{-18pt}
-
-\section{Computer Skills}
-
-\begin{factlist}
-
-\item{Languages}
-    {{\textsc{Proficient:}} Python - Java - Rust \newline
-     {\textsc{Familiar:}} C/C++ - Javascript - Haskell - Go}
-    
-\item{OS}
-    {Linux, Windows}
-
-\item{Tools}
-    {Git, Jupyter}
-
-\item{Courses}
-    {Intro to CS \newline
-    Intro to OOP \newline
-    Intro to Data Structures and Algorithms \newline
-    Linear Algebra I \& II \newline
-    Quantum Computing and Information Theory}
-
-
-\end{factlist}
-
-\vspace{-24pt}
-
 \section{Projects}
 
 Automated scheduling web application: generates a list of valid schedules from an input of desired classes and times (written in Rust/Javascript/Elm) \\\\
 \emph{betuol}, a text-based game engine (written in Go; see Github)
+
+\end{eventlist}
+\end{minipage}
 
 \end{document}
