@@ -1,8 +1,11 @@
 \documentclass{tccv}
 \usepackage[english]{babel}
 \usepackage{hanging}
+\usepackage{tabulary}
 
 \begin{document}
+
+\small
 
 \Header{Sam Delmerico}
     {(404) 786-3104}
@@ -30,16 +33,16 @@
 
     \section{Computer Skills}
     \textbf{\textsc{Languages}}
-    
-    \textsc{Proficient:} Python - Rust - Javascript
-    
-    \textsc{Familiar:}
-    {
-        C/C++ - Java - C\# - Haskell - Go
-    } \\
+  
+    \begin{tabulary}{\linewidth}{lL}
+        \textsc{Proficient:} & Python - Rust - Javascript/Typescript \\
+        \\
+        \textsc{Familiar:} &  C/C++ - Java - C\# - Haskell - Go
+    \end{tabulary}
+    \\\\
     
     \textbf{\textsc{OS}}:
-        Linux, Windows
+        Linux, Windows \\
    
     \textbf{\textsc{Tools}}:
         Git, Jupyter, \LaTeX{} \\
@@ -72,7 +75,7 @@
 \item{Jun 2019 -- Present}
      {Kabbage, Inc.}
      {Software Engineering Intern}
-    
+     
     I worked directly with an engineering team using an Agile methodology to pick up tickets and help them finish their sprints. My responsibilities were split between the C\#/.NET microservice-based backend API, and the frontend Angular web app. On the frontend I worked on bug fixes and user-facing feature implementation with idiomatic Angular tooling including functional reactive programming with RxJS. Both sides of development gave me experience with the dependency injection pattern and asynchronous programming patterns. Our deployment was entirely container based, giving me a deeper exposure to Docker-based workflows and some exposure to Kubernetes deployment with Terraform.
 
 \item{Sept 2017 -- Present}
@@ -80,6 +83,12 @@
      {Undergraduate Research Assistant}
 
     I developed computational simulations of chemical systems. The simulations are written using a Python library and run on local Linux machines and on a computing cluster hosted by the school. Algorithms and mathematical analyses of the collected data are scripted in Python (often via Jupyter notebooks) making use of parsing libraries for extraction of relevant data.
+    
+\item{May 2018 -- May 2019}
+     {Georgia Tech Rugby Club}
+     {Treasurer}
+     
+    I was the treasurer for the Men’s Rugby Club at Georgia Tech, and I managed the \$10,000 semesterly budget for the team. 
 
 \item{Jan 2017 -- Aug 2017}
      {Ivanov Lab, Georgia State University}
@@ -91,7 +100,7 @@
      {OnSolve, Vietnam}
      {Software Engineering Intern}
 
-    While visiting my family in Vietnam for the summer, I set up an automatic product deployment pipeline by installing source control hooks to build the product with a cloud Jenkins instance and deploy production Docker containers to Amazon AWS.
+    While visiting my family in Vietnam for the summer, I set up an automatic product deployment pipeline for by installing source control hooks to build the product with a cloud-hosted Jenkins instance and deploy production Docker containers to Amazon AWS.
 
 \item{Aug 2016 -- Apr 2017}
      {Georgia State University}
