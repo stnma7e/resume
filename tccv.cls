@@ -30,7 +30,7 @@
 \LoadClassWithOptions{scrartcl}
 
 \setcounter{secnumdepth}{-1}
-\RequirePackage[hmargin=1.25cm,vmargin=1.25cm]{geometry} %,twocolumn,columnsep=.5cm]{geometry}
+\RequirePackage[hmargin=1.25cm,vmargin=1cm]{geometry} %,twocolumn,columnsep=.5cm]{geometry}
 \RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor,booktabs}
 \RequirePackage{hyperref,fontawesome,setspace}
 

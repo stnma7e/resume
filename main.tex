@@ -17,18 +17,29 @@
 
 \begin{minipage}[t]{0.35\textwidth}
     \section{Education}
+    
+    {\raggedright
+        I am currently pursuing my undergraduate degree in Computer Science at Georgia Tech.
+        \\
+    }
+    
+    \vspace{10pt}
+    
     \begin{tabular}{rl}
         2019 & \textbf{Chemistry, B.S.} \\
              & \emph{Georgia Tech} \\
-             & \emph{Highest Distinction} \\
+             & \emph{Highest Honors Graduate} \\
              & GPA: 3.71 \\
              & Dean's List \\
+ 
+        \\
         
         2017 & \textbf{Chemistry} \\
-        to   & \emph{Georgia State University} \\
-        2016 & GPA: 4.11 \\
+             & \emph{Georgia State University} \\
+             & GPA: 4.11 \\
              & Honors College \\
-             & President's List
+             & President's List \\
+             & \textbf{\emph{Transferred to GaTech}}
     \end{tabular}
 
     \section{Computer Skills}
@@ -36,28 +47,33 @@
   
     \begin{tabulary}{\linewidth}{lL}
         \textsc{Proficient:} & Python - Rust - Javascript/Typescript \\
-        \\
-        \textsc{Familiar:} &  C/C++ - Java - C\# - Haskell - Go
+        \textsc{Familiar:} &  C/C++ - Java - C\# - Haskell - Fortran
     \end{tabulary}
     \\\\
     
     \textbf{\textsc{OS}}:
-        Linux, Windows \\
+        Linux, Windows
    
     \textbf{\textsc{Tools}}:
         Git, Jupyter, \LaTeX{} \\
     
-    \textbf{Courses} \\
-        Intro to CS \newline
-        Intro to OOP \newline
-        Intro to Data Structures and Algorithms \newline
-        Linear Algebra I \& II \newline
-        Quantum Computing and Information Theory
+    \textbf{CS Courses} \\
+        Intro to OOP \\
+        Intro to Data Struct. and Algorithms \\
+        Design and Analysis of Algorithms \\
+        Quantum Comp. and Info. Theory \\
+ 
+    \textbf{Math Courses} \\
+        Applied Combinatorics \\
+        Discrete Math \\
+        Linear Algebra I \& II
         
     \section{Awards and Presentations}
     
     \textbf{President's Undergraduate \\ Research Award (PURA)} \\
-    \emph{Summer 2018}, Georgia Tech. I was selected to receive a stipend to conduct summer research with the McDaniel lab. \\
+    \emph{Summer 2018}, Georgia Tech. I was selected to receive a stipend to conduct summer research with the McDaniel lab. 
+    
+    \vspace{10pt}
     
     \textbf{Georgia Tech Energy Club} \\
     \emph{Fall 2018}, I was invited to talk about computational research in supercapacitor design. \\
@@ -72,29 +88,25 @@
 
 \begin{eventlist}
 
-\item{Jun 2019 -- Present}
+\item{Jun 2019 -- Aug 2019}
      {Kabbage, Inc.}
      {Software Engineering Intern}
      
-    I worked directly with an engineering team using an Agile methodology to pick up tickets and help them finish their sprints. My responsibilities were split between the C\#/.NET microservice-based backend API, and the frontend Angular web app. On the frontend I worked on bug fixes and user-facing feature implementation with idiomatic Angular tooling including functional reactive programming with RxJS. Both sides of development gave me experience with the dependency injection pattern and asynchronous programming patterns. Our deployment was entirely container based, giving me a deeper exposure to Docker-based workflows and some exposure to Kubernetes deployment with Terraform.
+    I worked directly with an engineering team using an Agile methodology to pick up tickets and help finish sprints. My responsibilities were split between the C\#/.NET microservice-based backend API, and the frontend Angular web app. On the frontend I worked on bug fixes and user-facing feature implementation with idiomatic Angular tooling including functional reactive programming with RxJS. Both sides of development gave me experience with the dependency injection pattern and asynchronous programming patterns. Our deployment was entirely container based, giving me a deeper exposure to Docker-based workflows and some exposure to Kubernetes deployment with Terraform.
 
 \item{Sept 2017 -- Present}
      {McDaniel Lab, Georgia Tech}
      {Undergraduate Research Assistant}
 
-    I developed computational simulations of chemical systems. The simulations are written using a Python library and run on local Linux machines and on a computing cluster hosted by the school. Algorithms and mathematical analyses of the collected data are scripted in Python (often via Jupyter notebooks) making use of parsing libraries for extraction of relevant data.
+    I worked on a project to find optimal strategies for supercapacitor design. This project involved programming a simulation using Python bindings to a C++/CUDA backend and running on local and remote Linux computing clusters. To analyze the results, other Python libraries were used to program analysis algorithms and extract relevant data (often via Jupyter notebooks).
+    \\\\
+    Aside from this, I work on a molecular dynamics code in Fortran to which I added a Monte Carlo algorithm for determining equilibrium system pressure and the capability to augment certain functions with neural network input.
     
-\item{May 2018 -- May 2019}
-     {Georgia Tech Rugby Club}
-     {Treasurer}
-     
-    I was the treasurer for the Men’s Rugby Club at Georgia Tech, and I managed the \$10,000 semesterly budget for the team. 
-
 \item{Jan 2017 -- Aug 2017}
      {Ivanov Lab, Georgia State University}
      {Undergraduate Research Assistant}
 
-    I helped script data analysis programs for the Ivanov group, a computational biophysical chemistry lab.
+    In my first introduction to research, I setup a pipeline for running chemistry simulations on our GPU cluster, and I helped script data analysis programs for other memebers of the team. Notably, we used a PCA analysis to uncover physically relevant motions of a protein. 
 
 \item{May 2017}
      {OnSolve, Vietnam}
@@ -110,7 +122,7 @@
 
 \section{Projects}
 
-\href{https://stnma7e.github.io/schedulater}{\emph{schedulater}}, generates a list of valid course schedules for Georgia Tech classes from an input of desired options (written in Javascript/Elm; see Github). 
+\href{https://stnma7e.github.io/schedulater}{\emph{schedulater}}, generates a list of valid course schedules for Georgia Tech classes from an input of desired options; essentially solving the knapsack problem (written in Javascript/Elm; see Github). 
 \\ \\
 \emph{betuol}, a text-based game engine (written in Go; see Github)
 
