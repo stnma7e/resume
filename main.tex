@@ -1,132 +1,176 @@
-\documentclass{tccv}
+\documentclass[fontsize=11pt]{tccv}
 \usepackage[english]{babel}
 \usepackage{hanging}
 \usepackage{tabulary}
 
 \begin{document}
-
 \Header{Sam Delmerico}
     {(404) 786-3104}
-    {Atlanta, GA}
-    {}
+    {\hspace{5pt} Atlanta, GA}
     {svdelmerico@gmail.com}
     {github.com/stnma7e}
     {linkedin.com/in/sam-delmerico}
-
-\small
-
+    
+% use smaller font
+% \small
+    
 \begin{minipage}[t]{0.35\textwidth}
     \section{Education}
     
-    {\raggedright
-        I am currently pursuing my undergraduate degree in Computer Science at Georgia Tech.
-        \\
-    }
-    
-    \vspace{10pt}
-    
     \begin{tabular}{rl}
-        2019 & \textbf{Chemistry, B.S.} \\
+        2020 & \textbf{Chemistry, B.S.} \\
+             & \emph{Mathematics}, \textbf{Minor} \\
              & \emph{Georgia Tech} \\
-             & \emph{Highest Honors Graduate} \\
-             & GPA: 3.71 \\
-             & Dean's List \\
- 
-        \\
-        
-        2017 & \textbf{Chemistry} \\
-             & \emph{Georgia State University} \\
-             & GPA: 4.11 \\
-             & Honors College \\
-             & President's List \\
-             & \textbf{\emph{Transferred to GaTech}}
+             & Highest Honors Graduate
     \end{tabular}
-
+\end{minipage}
+\begin{minipage}[t]{0.65\textwidth}
     \section{Computer Skills}
     \textbf{\textsc{Languages}}
   
     \begin{tabulary}{\linewidth}{lL}
-        \textsc{Proficient:} & Python - Rust - Javascript/Typescript \\
-        \textsc{Familiar:} &  C/C++ - Java - C\# - Haskell - Fortran
+        \textsc{Proficient:} & Python - C/C++ - Rust - Javascript/Typescript \\
+        \textsc{Familiar:} &  C\# - Haskell - Fortran
     \end{tabulary}
-    \\\\
+    \\
     
     \textbf{\textsc{OS}}:
         Linux, Windows
    
     \textbf{\textsc{Tools}}:
-        Git, Jupyter, \LaTeX{} \\
-    
-    \textbf{CS Courses} \\
-        Intro to OOP \\
-        Intro to Data Struct. and Algorithms \\
-        Design and Analysis of Algorithms \\
-        Quantum Comp. and Info. Theory \\
- 
-    \textbf{Math Courses} \\
-        Applied Combinatorics \\
-        Discrete Math \\
-        Linear Algebra I \& II
-        
-    \section{Awards and Presentations}
-    
-    \textbf{President's Undergraduate \\ Research Award (PURA)} \\
-    \emph{Summer 2018}, Georgia Tech. I was selected to receive a stipend to conduct summer research with the McDaniel lab. 
-    
-    \vspace{10pt}
-    
-    \textbf{Georgia Tech Energy Club} \\
-    \emph{Fall 2018}, I was invited to talk about computational research in supercapacitor design. \\
-    
-    \textbf{SERMACS 2018} \\
-    \emph{Fall 2018}, Poster presentation on my work computationally modelling supercapacitors.
+        Git, Docker, PostgreSQL, \LaTeX{}
 \end{minipage}
-\begin{minipage}[t]{0.3\textwidth}
-\end{minipage}
-\begin{minipage}[t]{0.65\textwidth}
-\section{Work experience}
 
+\section{Work experience}
 \begin{eventlist}
 
+\item{Jul 2020 -- Present}
+     {ARiA (Applied Research in Acoustics)}
+     {Software Engineer}
+     
+    { \setlength\parindent{24pt}
+        \textbf{Sonar Training Project}
+
+        $\circ$ Was Team Lead for a full stack 3D graphics web application with a Python microservice backend and React+Babylon.js frontend.
+        
+        $\circ$ Helped team adopt Agile software practice.
+        
+        $\circ$ Implemented caching on frontend (localstorage) and backend (PostgreSQL).
+        
+        $\circ$ Implemented streaming of large data from backend to frontend.
+        
+        $\circ$ Helped encourage code reuse in modules and components on Python backend and React frontend.
+        
+        $\circ$ Helped encourage use of Typescript types on frontend.
+        
+        $\circ$ Added asynchronous request handling to Python backend.
+        
+        $\circ$ Created and documented Kubernetes migration plan.
+         \\
+        
+        \textbf{Acoustics Simulation Project}
+        
+        $\circ$ Helped construct a high-performance acoustic simulation program in C++.
+        
+        $\circ$ Initiated conversion of build system from Make to CMake.
+        
+        $\circ$ Helped construct and train a 3D GAN for inpainting tasks.
+        \\
+        
+        Regularly worked with Docker: creating and deploying Docker containers, Gitlab CI/CD, and deploying microservices on Docker swarm. I also used Docker to create data generation pipelines used to train the GAN used in the Acoustics Simulation Project.
+    }
+     
 \item{Jun 2019 -- Aug 2019}
      {Kabbage, Inc.}
      {Software Engineering Intern}
      
-    I worked directly with an engineering team using an Agile methodology to pick up tickets and help finish sprints. My responsibilities were split between the C\#/.NET microservice-based backend API, and the frontend Angular web app. On the frontend I worked on bug fixes and user-facing feature implementation with idiomatic Angular tooling including functional reactive programming with RxJS. Both sides of development gave me experience with the dependency injection pattern and asynchronous programming patterns. Our deployment was entirely container based, giving me a deeper exposure to Docker-based workflows and some exposure to Kubernetes deployment with Terraform.
-
-\item{Sept 2017 -- Present}
+    { \setlength\parindent{24pt}
+         $\circ$ Part of an Agile development team working on a full stack web application. Responsibilities were split between backend work on a C\#/.NET microservice architecture and a frontend web application using Angular+RxJS.
+         
+         $\circ$ Worked with Kubernetes and Terraform for deployment in a rolling-release CI/CD development environment.
+         
+         $\circ$ Implemented hashing scheme to obfuscate invoice numbers.
+     }
+     
+\item{Sep 2017 -- April 2020}
      {McDaniel Lab, Georgia Tech}
      {Undergraduate Research Assistant}
 
-    I worked on a project to find optimal strategies for supercapacitor design. This project involved programming a simulation using Python bindings to a C++/CUDA backend and running on local and remote Linux computing clusters. To analyze the results, other Python libraries were used to program analysis algorithms and extract relevant data (often via Jupyter notebooks).
-    \\\\
-    Aside from this, I work on a molecular dynamics code in Fortran to which I added a Monte Carlo algorithm for determining equilibrium system pressure and the capability to augment certain functions with neural network input.
-    
+    { \setlength\parindent{24pt}
+        $\circ$ Performed initial investigation into using convolutional neural networks to decompose chemical energies in water clusters using the SchNetPack library.
+
+        $\circ$ Added a Monte Carlo algorithm for determining equilibrium pressure state for a molecular dynamics code in Fortran.
+
+        $\circ$ Programmed simulations of ion diffusion for supercapacitors. Analysis of the data was done in Jupyter notebooks using specialized chemical analysis libraries and some custom codes to extract relevant data. See publications.
+    }
+    \\
+    \\
+
 \item{Jan 2017 -- Aug 2017}
      {Ivanov Lab, Georgia State University}
      {Undergraduate Research Assistant}
 
-    In my first introduction to research, I setup a pipeline for running chemistry simulations on our GPU cluster, and I helped script data analysis programs for other memebers of the team. Notably, we used a PCA analysis to uncover physically relevant motions of a protein. 
-
+    { \setlength\parindent{24pt}
+        $\circ$ Helped with scripting tedious manual data generation and analysis jobs on a GPU cluster.
+    }
+    
 \item{May 2017}
-     {OnSolve, Vietnam}
+     {OnSolve, Inc.}
      {Software Engineering Intern}
 
-    While visiting my family in Vietnam for the summer, I set up an automatic product deployment pipeline for by installing source control hooks to build the product with a cloud-hosted Jenkins instance and deploy production Docker containers to Amazon AWS.
-
-\item{Aug 2016 -- Apr 2017}
-     {Georgia State University}
-     {Teaching Assistant}
-
-    I assisted in three general chemistry labs during my first two semesters of college.
-
-\section{Personal Projects}
-
-\href{https://stnma7e.github.io/schedulater}{\emph{schedulater}}, generates a list of valid course schedules for Georgia Tech classes from an input of desired options; essentially solving the knapsack problem (written in Javascript/Elm; see Github). 
-\\ \\
-\emph{betuol}, a text-based game engine (written in Go; see Github)
-
+    { \setlength\parindent{24pt}
+        $\circ$ Set up continuous delivery pipeline with a containerized Jenkins build instance and deployment of production Docker containers to Amazon AWS.
+    }
+    
 \end{eventlist}
-\end{minipage}
 
+\section{Projects and Academic Accomplishments}
+
+\href{https://stnma7e.github.io/schedulater}{\emph{schedulater}}, a schedule generator for Georgia Tech to customize class schedules (written in Javascript/Elm; see Github).
+\\
+
+\textbf{Sigma Xi Best Undergraduate Research Award} \\
+\emph{Spring 2020}, Georgia Tech. For most accomplished undergraduate research at Georgia Tech.
+\\
+
+\textbf{William M. Spicer Scholarship Award} \\
+\emph{Spring 2020}, Georgia Tech. 
+\\
+
+\textbf{President's Undergraduate Research Award (PURA)} \\
+\emph{Summer 2018}, Georgia Tech. I was selected to receive a stipend to conduct summer research with the McDaniel lab. 
+\\
+
+\textbf{SERMACS 2018} \\
+\emph{Fall 2018}, Poster presentation on my work on computational models for supercapacitors.
+\\
+
+\textbf{Georgia Tech Energy Club} \\
+\emph{Fall 2018}, I was invited to speak about research in computational chemistry for supercapacitor design.
+\\
+    
+\begin{center}
+\begin{tabular}{cc}
+    \textbf{CS Courses}  & \textbf{Math Courses} \\
+    Object Oriented Programming &  Probability + Statistics \\
+    Data Structures and Algorithms &  Adv. Math Methods for Engineering \\
+    Algorithm Design and Analysis &  Linear Algebra I, II \\
+    Quantum Comp. and Info. Theory & Differential Equations \\
+    
+    & Applied Combinatorics \\
+    & Discrete Mathematics \\
+\end{tabular}
+\end{center}
+
+\section{Publications}
+\begin{hangparas}{0.25in}{1}
+    S. Delmerico and J.G. McDaniel, "Free Energy Barriers for TMEA+, TMA+, and BF4- Ion Diffusion through Nanoporous Carbon Electrodes". \emph{Carbon.}
+    % \textbf{2020}, 161, 550-561. 
+    \hyperlink{https://doi.org/10.1016/j.carbon.2020.01.100}{https://doi.org/10.1016/j.carbon.2020.01.100}
+    \\
+    
+    Y.J. Tu, S. Delmerico, and J.G. McDaniel, "Inner-Layer Capacitance of Organic Electrolytes from Constant Voltage Molecular Dynamics". \emph{J. Chem. Phys. C.}
+    % \textbf{2020}, 124, 2907-2922. 
+    \hyperlink{https://doi.org/10.1021/acs.jpcc.0c00299}{https://doi.org/10.1021/acs.jpcc.0c00299}
+\end{hangparas}
 \end{document}

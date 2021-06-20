@@ -30,9 +30,9 @@
 \LoadClassWithOptions{scrartcl}
 
 \setcounter{secnumdepth}{-1}
-\RequirePackage[hmargin=1.25cm,vmargin=1cm]{geometry} %,twocolumn,columnsep=.5cm]{geometry}
+\RequirePackage[letterpaper,hmargin=1cm,vmargin=0.5cm]{geometry} %,twocolumn,columnsep=.5cm]{geometry}
 \RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor,booktabs}
-\RequirePackage{hyperref,fontawesome,setspace}
+\RequirePackage{hyperref,fontawesome,setspace,titlesec}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
 % The text is capitalized before being expanded.
@@ -66,20 +66,21 @@
 \definecolor{link}{HTML}{506060} % Hyperlinks
 \hypersetup{colorlinks,breaklinks,urlcolor=link,linkcolor=link}
 \setkomafont{disposition}{\color[HTML]{801010}}
-\setkomafont{section}{\scshape\Large\mdseries}
+\setkomafont{section}{\scshape\large\mdseries}
 
 % Addition to this class by Sam Delmerico.
 \newcommand{\Header}[7]{
     \begin{minipage}[c]{0.2\textwidth}
         {\usekomafont{part}\selectfont\huge #1}
+        {\usekomafont{part}\selectfont\large #3}
+        \vspace{7pt}
     \end{minipage}
     \begin{minipage}[r]{0.8\textwidth}
         \begin{flushright}
         \colorbox[HTML]{F5DD9D}{
-            \begin{tabular}{llrr}
-                \faPhone & #2 & \href{mailto:#5}{#5} & \faEnvelopeO \\
-                \faHome & #3 & \href{http://#6}{#6} & \faGithub \\
-                & #4 & \href{http://#7}{#7} & \faLinkedin \\
+            \begin{tabular}{clrc}
+                \faPhone & #2 & \href{mailto:#4}{#4} & \faEnvelopeO \\
+                 \faGithub & \href{https://#5}{#5} & \href{https://#6}{#6} & \faLinkedin 
             \end{tabular}
         }
         \end{flushright}
@@ -101,6 +102,8 @@
 
 % Overrides the \section command to capitalize every
 % word for cosmetic purposes and draws a rule under it.
+% \titlespacing*{\section}  
+% {0pt}{9.5ex}{2.3ex}
 \let\old@section\section
 \renewcommand\section[2][]{%
     \old@section[#1]{\ucwords{#2}}%
@@ -153,16 +156,16 @@
     \newcommand*\inskip{}
     \renewcommand\item[3]{
     	\inskip
-    	{\raggedleft\textsc{##1}\\[1pt]}
-    	{\large\textbf{\textit{##3}}\\[2pt]}
-    	\ifstrempty{##2}{}{\emph{##2}}
-    % 	\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-    % 	\begin{tabularx}{\textwidth}{lR}
-    %     	\ifstrempty{##2}{}{##2} &
-    %     	{\textsc{##1}\\[1pt]}
-    % 	\end{tabularx}
+    % 	{\raggedleft\textsc{##1}\\[1pt]}
+    	{\normalsize\textbf{\textit{##3}}\\[2pt]}
+    % 	\ifstrempty{##2}{}{\emph{##2}}
+    	\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+    	\begin{tabularx}{\textwidth}{lR}
+        	\ifstrempty{##2}{}{##2} &
+        	{\textsc{##1}\\[1pt]}
+    	\end{tabularx}
     	
-    	\renewcommand\inskip{\smallskip}
+    	\renewcommand\inskip{\bigskip}
     }
 }
 
